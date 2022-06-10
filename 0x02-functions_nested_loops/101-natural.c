@@ -15,7 +15,7 @@ int main(void)
 	sum5 = 0;
 	sum = 0;
 
-	for (i = 0; i < 10204; ++i)
+	for (i = 0; i < 10204; i++)
 	{
 		if ((i % 3) == 0)
 		{
