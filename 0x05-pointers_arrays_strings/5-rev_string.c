@@ -3,27 +3,30 @@
 /**
  * rev_string - reverses a string
  * @s: string to be reversed
+ * Retun: void
  */
 
 void rev_string(char *s)
 {
-	char tmp;
-	int i, len, len1;
+	char first, last;
+	int i, max, half;
 
-	len = 0;
-	len1 = 0;
+	i = 0;
 
-	while (s[len] != '\0')
+	while (s[i] != '\0')
 	{
-		len++;
+		i++;
 	}
 
-	len1 = len - 1;
+	max = i - 1;
+	half = max / 2;
 
-	for (i = 0; 1 < len / 2; i++)
+	while (half >= 0)
 	{
-		tmp = s[i];
-		s[i] = s[len1];
-		s[len1--] = tmp;
+		first = s[max - half];
+		last = s[half];
+		s[half] = first;
+		s[max - half] = last;
+		half--;
 	}
 }
